@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+
+h1 {
+  font-size: 4.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* color: aqua; */
+}
+
+.h1-tittle {
+  color: black;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 40vh;
+  background-color: bisque;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  /* -ms-transform: translate(-30%, -50%); */
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 800px;
+  max-height: 100%;
+  max-width: 100%;
+  /* background-color: white; */
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px 2px; */
+}
+
+.btn-grid {
+  display: grid;
+  /* grid-template-columns: repeat(1, center); */
+  /* align-content: center; */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: hsl(200, 100%, 50%);
+  border: 1px solid hsl(200, 100%, 30%);
+  box-shadow: 0 0 10px 2px;
+
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: palevioletred;
+  background-color: pink;
+  color: palevioletred;
+}
+
+.btn-tittle {
+  width: 150px;
+  height: 100px;
+}
+
+.btn-page {
+  width: 350px;
+  height: 300px;
+}
+
+/* Background Styles Only */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
