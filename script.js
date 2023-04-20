@@ -1,11 +1,17 @@
 const textElement = document.getElementById("text");
 const optionButtonsElement = document.getElementById("option-buttons");
+// optionButtonsElement.style.backgroundImage =
+//   "url('./DIGITALDIVINATION/image/Homepage-01.jpg')";
+// const img = (document.getElementById("ElementId").style.backgroundImage =
+//   imageUrl);
+// var mybackground = document.getElementById("option-buttons");
 
 let state = {};
 var truecount = 0;
-// var sleepmore;
 var sleepmoretrue, walktrue, sweettrue, movietrue;
-var movetoending = 5 || 6;
+// var movetoending = 5 || 6;
+// var imageUrl = "/image/Homepage-01.jpg";
+
 // let i = 1;
 // var option = {
 //   nextText: 5,
@@ -34,6 +40,15 @@ function showTextNode(textNodeIndex) {
     }
   });
 }
+function createLink() {
+  optionButtonsElement.style.backgroundImage =
+    "url('./DIGITALDIVINATION/image/Homepage-01.jpg')";
+  //   var link = document.createElement("a");
+  //   link.href = "/image/FristPage-01.jpg";
+  //   //   link.target = "_blank";
+  //   link.innerHTML = "Go to Google";
+  //   document.body.appendChild(link);
+}
 
 function showOption(option) {
   return option.requiredState == null || option.requiredState(state);
@@ -45,6 +60,16 @@ function selectOption(option) {
   if (nextTextNodeId < 0) {
     return startGame();
   }
+
+  //   if (nextTextNodeId === 5) {
+  //     createLink();
+  //     // optionButtonsElement.style.backgroundImage =
+  //     //   "url('/image/Homepage-01.jpg')";
+  //   }
+
+  //   if (nextTextNodeId >= 7) {
+  //     img;
+  //   }
 
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
@@ -112,7 +137,7 @@ function selectOption(option) {
   console.log("truecount", truecount);
   console.log("nextTextNodeId", nextTextNodeId);
   console.log("option.nextText", option.nextText);
-  //   console.log("movetoending", random);
+  console.log("movetoending", createLink());
 
   //   console.log(option.sleepmore, option.walk);
 }
@@ -160,16 +185,16 @@ const textNodes = [
   },
   {
     id: 3,
-    text: "gummy bear is hungry. What are you going to serve?",
+    text: "Gummy bear is hungry. What type of food will you serve to the hungry gummy bear?",
     options: [
       {
-        text: "Strawberry Cake",
+        text: "I'll serve some strawberry cake to the gummy bear.",
         // setState: { sweet: true },
         sweet: true,
         nextText: 4,
       },
       {
-        text: "Chicken Salad",
+        text: "I'll make a chicken salad for the gummy bear to eat.",
         // setState: { sweet: true },
         sweet: false,
         nextText: 4,
@@ -181,13 +206,13 @@ const textNodes = [
     text: "It's time to go to bed. What are you going to do?",
     options: [
       {
-        text: "watch movie",
+        text: "Watch a movie.",
         // setState: { movie: true },
         movie: true,
         nextText: 5,
       },
       {
-        text: "sleep",
+        text: "Sleep",
         // setState: { movie: false },
         movie: false,
         nextText: 6,
@@ -196,10 +221,10 @@ const textNodes = [
   },
   {
     id: 5,
-    text: "see the result",
+    text: "Check the result",
     options: [
       {
-        text: "see result",
+        text: "you made my day...",
         nextText: 7,
       },
     ],
@@ -207,17 +232,17 @@ const textNodes = [
 
   {
     id: 6,
-    text: "see the result",
+    text: "Check the result",
     options: [
       {
-        text: "see result",
+        text: "you made my day...",
         nextText: 8,
       },
     ],
   },
   {
     id: 7,
-    text: "It was very decent day!! Thank you for making my day",
+    text: "WONDERFUL!! I really enjoyed my day. Thank you so much. I hope you have nothing but good things happen today.",
     options: [
       {
         text: "Restart",
@@ -227,7 +252,7 @@ const textNodes = [
   },
   {
     id: 8,
-    text: "It was horrible...I regret letting you choose decisions",
+    text: "HORRIBLE... I regret letting you make decisions for me. Hope you have horrible day just as me",
     options: [
       {
         text: "Restart",

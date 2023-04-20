@@ -2,17 +2,24 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Noto Sans KR";
+  font-family: "Marker Felt";
 }
 
 h1 {
   font-size: 4.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid palevioletred;
   /* color: aqua; */
+}
+h2 {
+  color: palevioletred;
+}
+
+p {
+  color: gray;
 }
 
 .h1-tittle {
-  color: black;
+  color: palevioletred;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
@@ -25,13 +32,29 @@ body {
   text-align: center;
   width: 100vw;
   height: 40vh;
-  background-color: bisque;
+  /* background-color: bisque; */
+  background-image: url(/image/FirstPage-01.jpg);
+  background-size: 100%;
+}
+
+.body-tittle {
+  background-image: url(/image/Homepage-01.jpg);
+  background-size: 100%;
 }
 
 .center {
   margin: 0;
   position: absolute;
   top: 45%;
+  left: 50%;
+  /* -ms-transform: translate(-30%, -50%); */
+  transform: translate(-50%, -50%);
+}
+
+.center-tittle {
+  margin: 0;
+  position: absolute;
+  top: 55%;
   left: 50%;
   /* -ms-transform: translate(-30%, -50%); */
   transform: translate(-50%, -50%);
@@ -57,7 +80,7 @@ body {
 
 .btn {
   background-color: tan;
-  border: 1px solid hsl(200, 100%, 30%);
+  border: 1px solid burlywood;
   box-shadow: 0 0 10px 2px;
   font-size: 1.5rem;
   border-radius: 5px;
@@ -73,8 +96,9 @@ body {
 }
 
 .btn-tittle {
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
 }
 
 .btn-page {
