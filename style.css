@@ -33,12 +33,12 @@ body {
   width: 100vw;
   height: 40vh;
   /* background-color: bisque; */
-  background-image: url(/image/FirstPage-01.jpg);
+  background-image: url("./image/FirstPage-01.jpg");
   background-size: 100%;
 }
 
 .body-tittle {
-  background-image: url(/image/Homepage-01.jpg);
+  background-image: url(./image/Homepage-01.jpg);
   background-size: 100%;
 }
 
